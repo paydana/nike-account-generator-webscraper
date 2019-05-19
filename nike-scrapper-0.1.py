@@ -78,7 +78,7 @@ def create_new_account():
 					 "sslProxy":  sel_proxy
 				}
 
-			br = webdriver.Firefox(firefox_options = options, firefox_profile = profile, capabilities = caps)
+			br = webdriver.Firefox(firefox_options=options, firefox_profile = profile, capabilities = caps)
 			br.implicitly_wait(30)
 			br.set_page_load_timeout(60)
 
@@ -134,7 +134,6 @@ def create_new_account():
 			if br: br.quit()
 			quit()
 		except:
-			if br: br.quit()
 			print("{}Encountered a problem. Let's try again...{}".format(colored.fg(9), colored.attr(0)))
 
 if __name__ == "__main__":
